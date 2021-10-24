@@ -28,7 +28,7 @@ public class DetectionZombies : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision_in)
     {
         if (collision_in.CompareTag("Player"))
-        {
+        {//Penser à rajouter un système permettant de vérifier qu'il n'y a pas d'obstacle entre les zombies et le joueur
             detected = true;
         }
     }
