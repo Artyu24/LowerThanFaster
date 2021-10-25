@@ -26,7 +26,7 @@ public class EnemyDeplacement : MonoBehaviour
             horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * ( test1 ? 1 : test2 ? -1 : 0 );
             bool test3 = player.GetComponent<Transform>().position.y > zombies.GetComponent<Transform>().position.y;
             bool test4 = player.GetComponent<Transform>().position.y < zombies.GetComponent<Transform>().position.y;
-            verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test1 ? 1 : test2 ? -1 : 0);
+            verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test3 ? 1 : test4 ? -1 : 0);
         }
         else 
         {
