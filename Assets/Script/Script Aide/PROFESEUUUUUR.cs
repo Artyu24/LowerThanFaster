@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PROFESEUUUUUR : MonoBehaviour
 {
-    
+
+    public static PROFESEUUUUUR instance;
+
+    private void Start()
+    {
+        if(instance == null)
+            instance = this;
+    }
+
     void Update()
     {
         
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    public void BONJOUR()
     {
-        
+
     }
 }
 
