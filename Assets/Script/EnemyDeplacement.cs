@@ -31,8 +31,8 @@ public class EnemyDeplacement : MonoBehaviour
         else if (Random.Range(0,1000)<=10) 
         {
             // Détermine aléatoirement le prochain déplacement des ennemis en fonction de leur vitesse
-            horizontalMovement = Random.Range(-1, 2) * Random.Range(moveSpeedEnemy / 5, moveSpeedEnemy) * Time.fixedDeltaTime;
-            verticalMovement = Random.Range(-1, 2) * Random.Range(moveSpeedEnemy / 5, moveSpeedEnemy) * Time.fixedDeltaTime;
+            horizontalMovement = Random.Range(-1, 2) * moveSpeedEnemy/2 * Time.fixedDeltaTime;
+            verticalMovement = Random.Range(-1, 2) * moveSpeedEnemy / 2 * Time.fixedDeltaTime;
         }
         //Créé un vecteur désigant la direction dans laquel va aller l'ennemi
         Vector3 targetVelocity = new Vector2(horizontalMovement, verticalMovement);
