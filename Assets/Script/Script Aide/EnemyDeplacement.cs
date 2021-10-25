@@ -8,7 +8,12 @@ public class EnemyDeplacement : MonoBehaviour
     public float moveSpeedEnemy;
     public Rigidbody2D rbEnemy;
     public DetectionZombies detectionZombies;
+<<<<<<< Updated upstream
     public GameObject player
+=======
+    public GameObject player;
+    public GameObject zombies;
+>>>>>>> Stashed changes
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
@@ -20,7 +25,16 @@ public class EnemyDeplacement : MonoBehaviour
         if (detectionZombies.detected)
         {
             //Détermine la direction dans laquelle les zombies se dirigent lorsqu'ils ont détecté le joueur
+<<<<<<< Updated upstream
             horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * ();
+=======
+            bool test1 = player.GetComponent<Transform>().position.x < zombies.GetComponent<Transform>().position.x;
+            bool test2 = player.GetComponent<Transform>().position.x > zombies.GetComponent<Transform>().position.x;
+            horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test1 ? -1 : test2 ? 1 : 0 ) ;
+            bool test3 = player.GetComponent<Transform>().position.y < zombies.GetComponent<Transform>().position.y;
+            bool test4 = player.GetComponent<Transform>().position.y > zombies.GetComponent<Transform>().position.y;
+            verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test3 ? -1 : test4 ? 1 : 0);
+>>>>>>> Stashed changes
         }
         else 
         {

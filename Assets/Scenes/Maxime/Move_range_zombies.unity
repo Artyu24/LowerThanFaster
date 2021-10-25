@@ -768,4 +768,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedEnemy: 200
   rbEnemy: {fileID: 1957614600}
-  detectionZombies: {fileID: 0}
+  detectionZombies: {fileID: 1107066358}
+  player: {fileID: 1599385856}
+  zombies: {fileID: 1957614596}
