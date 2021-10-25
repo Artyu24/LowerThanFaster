@@ -685,8 +685,8 @@ MonoBehaviour:
   detected: 0
   isRunning: 0
   Range: {fileID: 1107066356}
-  rangeMax: 10
-  rangeMin: 5
+  rangeMax: 8
+  rangeMin: 3
 --- !u!58 &1107066359
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 3
 --- !u!1 &1599385856
 GameObject:
   m_ObjectHideFlags: 0
