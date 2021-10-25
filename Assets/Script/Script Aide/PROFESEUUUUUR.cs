@@ -18,9 +18,6 @@ public class PROFESEUUUUUR : MonoBehaviour
         
     }
 
-    public void BONJOUR()
-    {
-
-    }
+    
 }
 
