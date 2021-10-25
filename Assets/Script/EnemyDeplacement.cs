@@ -40,9 +40,4 @@ public class EnemyDeplacement : MonoBehaviour
         //Permet au personnage de se déplacer de façon progressive allant de sa position au vecteur déclarer au dessus
         rbEnemy.velocity = Vector3.SmoothDamp(rbEnemy.velocity, targetVelocity, ref velocity, .05f);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        horizontalMovement *= -1;
-        verticalMovement *= -1;
-    }
 }
