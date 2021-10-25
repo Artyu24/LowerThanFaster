@@ -9,6 +9,7 @@ public class EnemyDeplacement : MonoBehaviour
     public Rigidbody2D rbEnemy;
     public DetectionZombies detectionZombies;
     public GameObject player;
+    public GameObject zombies;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
@@ -20,13 +21,18 @@ public class EnemyDeplacement : MonoBehaviour
         if (detectionZombies.detected)
         {
             //Détermine la direction dans laquelle les zombies se dirigent lorsqu'ils ont détecté le joueur
-            horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * 1;
+            bool test1 = player.GetComponent<Transform>().position.x > zombies.GetComponent<Transform>().position.x;
+            bool test2 = player.GetComponent<Transform>().position.x < zombies.GetComponent<Transform>().position.x;
+            horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * ( test1 ? 1 : test2 ? -1 : 0 );
+            bool test3 = player.GetComponent<Transform>().position.y > zombies.GetComponent<Transform>().position.y;
+            bool test4 = player.GetComponent<Transform>().position.y < zombies.GetComponent<Transform>().position.y;
+            verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test3 ? 1 : test4 ? -1 : 0);
         }
-        else 
+        else if (Random.Range(0,1000)<=10) 
         {
-            // Détermine aléatoirement le déplacement des ennemis en fonction de leur vitesse
-            horizontalMovement = Random.Range(-1, 2) * Random.Range(0,moveSpeedEnemy) * Time.fixedDeltaTime;
-            verticalMovement = Random.Range(-1, 2) * Random.Range(0, moveSpeedEnemy) * Time.fixedDeltaTime;
+            // Détermine aléatoirement le prochain déplacement des ennemis en fonction de leur vitesse
+            horizontalMovement = Random.Range(-1, 2) * moveSpeedEnemy/2 * Time.fixedDeltaTime;
+            verticalMovement = Random.Range(-1, 2) * moveSpeedEnemy / 2 * Time.fixedDeltaTime;
         }
         //Créé un vecteur désigant la direction dans laquel va aller l'ennemi
         Vector3 targetVelocity = new Vector2(horizontalMovement, verticalMovement);
@@ -34,5 +40,4 @@ public class EnemyDeplacement : MonoBehaviour
         //Permet au personnage de se déplacer de façon progressive allant de sa position au vecteur déclarer au dessus
         rbEnemy.velocity = Vector3.SmoothDamp(rbEnemy.velocity, targetVelocity, ref velocity, .05f);
     }
-
 }
