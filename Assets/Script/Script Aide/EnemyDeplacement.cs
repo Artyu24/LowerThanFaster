@@ -8,7 +8,7 @@ public class EnemyDeplacement : MonoBehaviour
     public float moveSpeedEnemy;
     public Rigidbody2D rbEnemy;
     public DetectionZombies detectionZombies;
-    public GameObject player
+    public GameObject player;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
@@ -20,7 +20,7 @@ public class EnemyDeplacement : MonoBehaviour
         if (detectionZombies.detected)
         {
             //Détermine la direction dans laquelle les zombies se dirigent lorsqu'ils ont détecté le joueur
-            horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * ();
+            horizontalMovement = moveSpeedEnemy * Time.fixedDeltaTime * 1;
         }
         else 
         {
