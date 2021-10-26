@@ -8,7 +8,6 @@ public class VieDuJoueur : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     private bool immunité=false;
-    private bool zombieInRange = false;
     public SpriteRenderer spriteDuJoueur;
 
     // Start is called before the first frame update
@@ -21,13 +20,10 @@ public class VieDuJoueur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (zombieInRange)
-        {
-            TakeDamage(20);
-        }
+
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (immunité == false)
         {
@@ -36,20 +32,7 @@ public class VieDuJoueur : MonoBehaviour
             immunité = true;
             StartCoroutine(FlashImmunité());
             StartCoroutine(Immunité());
-            
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Zombie")
-            zombieInRange = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Zombie")
-            zombieInRange = false;
     }
 
     IEnumerator Immunité()

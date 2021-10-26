@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Collectable
   - Floor
-  - Zombie
   layers:
   - Default
   - TransparentFX
