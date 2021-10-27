@@ -5,17 +5,22 @@ using UnityEngine;
 public class DetectionZombies : MonoBehaviour
 {
     public bool detected = false;
-    public bool isRunning;
     public GameObject Range;
     public float rangeMax;
     public float rangeMin;
-    private Deplacement1 deplacement;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
 
     private void Update()
     {
+        
         //Change la portée de détection des zombies si le joueur court ou non
-        if (isRunning)
+        if (player.GetComponent<Deplacement1>().sprint)
         {
             Range.GetComponent<CircleCollider2D>().radius = rangeMax;
         }
@@ -28,16 +33,17 @@ public class DetectionZombies : MonoBehaviour
     //Cela permettra de savoir si les zombies se baladent aléatoirement ou non
     private void OnTriggerEnter2D(Collider2D collision_in)
     {
-        isRunning = deplacement.sprint;
 
-        if (collision_in.CompareTag("Player")&&isRunning)
+        
+
+        if (collision_in.CompareTag("Player")&& player.GetComponent<Deplacement1>().sprint)
         {//Penser à rajouter un système permettant de vérifier qu'il n'y a pas d'obstacle entre les zombies et le joueur
             detected = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")&&isRunning)
+        if (collision.CompareTag("Player")&& player.GetComponent<Deplacement1>().sprint)
         {
             detected = false;
         }
