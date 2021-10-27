@@ -6,47 +6,54 @@ using UnityEngine.UI;
 public class Collectables : MonoBehaviour
 {
 
-    private bool isInRange;
-    private bool presence=true; 
-    public Text message;
+    private bool isInRange; 
+    public Text message; //indication "appuyer sur F"
 
-    private GameObject objet = null;
-    private string nomObjet;
-    private bool enDestruction=false;
+    private GameObject objet = null; //le dernier objet rencontré par le joueur
+    private string nomObjet; //son nom 
+    private bool enDestruction=false; 
 
-    public Image visuel1;
+    public Image visuel1; //images dans l'inventaire de chacun des objets à ramasser
     public Image visuel2;
     public Image visuel3;
     public Image visuel4;
 
-    private int nbImages = 0;
-    Vector3 delta = new Vector3(70, 0, 0);
+    private int nbImages = 0; // chaque case de l'inventaire prise oblige les autres à se decaler
+    Vector3 delta = new Vector3(50, 0, 0); //decalement de x=+70 vers la droite pour chaque enplacement occupé
+    public Vector3 positionInventaire = new Vector3(-170, 90, 0); //position du 1er emplacement inventaire
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isInRange && presence && Input.GetKeyDown(KeyCode.F))
+        if (isInRange && Input.GetKeyDown(KeyCode.F)) //le joueur recupere un objet
         {
             
-            objet.transform.localScale = new Vector3(0, 0, 0);
-            presence = false;
             StartCoroutine(Obtenu());
-            switch(nomObjet)
+            Destroy(objet);// un message "est obtenu" reste 2 secondes
+            switch (nomObjet) //l'image de l'objet apparait dans l'inventaire. Def de sa position, l'active, et sort du switch.
             {
-                case "Objet1":  { visuel1.rectTransform.position = visuel1.rectTransform.position + delta * nbImages; visuel1.gameObject.SetActive(true); break; }
-                case "Objet2": { visuel2.rectTransform.position = visuel2.rectTransform.position + delta * nbImages; visuel2.gameObject.SetActive(true); break; }
-                case "Objet3": { visuel3.rectTransform.position = visuel3.rectTransform.position + delta * nbImages; visuel3.gameObject.SetActive(true); break; }
-                case "Objet4": { visuel4.rectTransform.position = visuel4.rectTransform.position + delta * nbImages; visuel4.gameObject.SetActive(true); break; }
+                case "Objet1":  { 
+                        visuel1.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel1.gameObject.SetActive(true); 
+                        break; }
+                case "Objet2": { 
+                        visuel2.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel2.gameObject.SetActive(true);
+                        break; }
+                case "Objet3": { 
+                        visuel3.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel3.gameObject.SetActive(true);
+                        break; }
+                case "Objet4": { 
+                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel4.gameObject.SetActive(true); 
+                        break; }
             }
-            nbImages++;
+            nbImages++; //un objet recupéré en plus
             
         }
     }
@@ -55,13 +62,12 @@ public class Collectables : MonoBehaviour
     {
         if (collision.gameObject.tag=="Collectable")
         {
-            if (enDestruction==false)
-                nomObjet = collision.transform.name;
-                objet = GameObject.Find(nomObjet);
-            message.gameObject.SetActive(true);
-            presence = true;
-            isInRange = true;
-            message.text = "Appuyer \"F\" pour ramasser l'objet";
+            nomObjet = collision.transform.name; 
+            objet = GameObject.Find(nomObjet); //on identifie l'objet trouvé
+            message.text = "Appuyer \"F\" pour ramasser l'objet"; //(ré)initialisation
+            message.gameObject.SetActive(true); //le message apparait
+            isInRange = true; 
+            
         }
     }
 
@@ -69,10 +75,13 @@ public class Collectables : MonoBehaviour
     {
         if (collision.gameObject.tag == "Collectable")
         {
-            objet = null;
+            objet = null; //on remet l'objet enregistré à 0
             isInRange = false;
-            message.gameObject.SetActive(false);
-            message.text = "Appuyer \"F\" pour ramasser l'objet";
+            if (enDestruction == false) //si l'objet se detruit, le joueur sort automatiquement de la zone trigger et le massage disparait alors qu'on veut pas
+            {
+                message.gameObject.SetActive(false); //disparition du message
+                message.text = "Appuyer \"F\" pour ramasser l'objet"; //(ré)initialisation
+            }
         }
     }
 
@@ -80,10 +89,10 @@ public class Collectables : MonoBehaviour
     {
         message.text = "Objet obtenu!";
         enDestruction = true; //parce que si on rentre dans la zone de trigger d'un autre objet avant, c'est lui qui disparait :((
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         enDestruction = false;
-        if (message.text == "Objet obtenu!")
+        if (message.text == "Objet obtenu!") //si on est entré dans la zone d'un autre objet et que le message s'est reset, il doit resté affiché et non pas disparaitre
             message.gameObject.SetActive(false);
-        Destroy(objet);
+        
     }
 }
