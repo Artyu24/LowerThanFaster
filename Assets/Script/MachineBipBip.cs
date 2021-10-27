@@ -4,38 +4,54 @@ using UnityEngine;
 
 public class MachineBipBip : MonoBehaviour
 {
-    public bool machineReceived;
-    private bool nextBip;
-    public int bipTiming;
-    public GameObject player;
-    public GameObject item;
     public AudioSource sound;
-    private bool cercleLoin;
-    private bool cercleProche;
-    private bool cercleMoyen;
 
-    void Start()
-    {
-        //Initialise le fait que le bipeur n'ait pas possédé par le joueur
-        machineReceived = false;
-        //Initialise le bipeur
-        nextBip = true;
-    }
+    public Transform point;
+
+    public float radiusLoin;
+    public float radiusMoyen;
+    public float radiusProche;
+
+    public LayerMask playerLayer;
+
+    private bool cercleLoin;
+    private bool cercleMoyen;
+    private bool cercleProche;
+
+    private bool secuCoroutine;
 
     void Update()
     {
-        if (machineReceived && nextBip)
+        cercleLoin = Physics2D.OverlapCircle(point.position, radiusLoin, playerLayer);
+        cercleMoyen = Physics2D.OverlapCircle(point.position, radiusMoyen, playerLayer);
+        cercleProche = Physics2D.OverlapCircle(point.position, radiusProche, playerLayer);
+
+        if (cercleProche && !secuCoroutine)
         {
-            
-            //Relance la coroutine dès que celle-ci se finit 
-            TestDistance();
-            nextBip = false;
+            StartCoroutine(TestDistance(0.5f));
+        }
+        else if (cercleMoyen && !secuCoroutine)
+        {
+            StartCoroutine(TestDistance(1));
+        }
+        else if (cercleLoin && !secuCoroutine)
+        {
+            StartCoroutine(TestDistance(2));
         }
     }
-    IEnumerator TestDistance()
+    IEnumerator TestDistance(float time)
     {
-        
-        yield return new WaitForSeconds(bipTiming);
-        nextBip = true;
+        secuCoroutine = true;
+        sound.Play();
+        yield return new WaitForSeconds(time);
+        secuCoroutine = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(point.position, radiusLoin);
+        Gizmos.DrawWireSphere(point.position, radiusMoyen);
+        Gizmos.DrawWireSphere(point.position, radiusProche);
     }
 }
