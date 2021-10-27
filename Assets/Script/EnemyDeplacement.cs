@@ -8,12 +8,18 @@ public class EnemyDeplacement : MonoBehaviour
     public float moveSpeedEnemy;
     public Rigidbody2D rbEnemy;
     public DetectionZombies detectionZombies;
-    public GameObject player;
+    private GameObject player;
     public GameObject zombies;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
     private float verticalMovement;
+
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void FixedUpdate()
     {
