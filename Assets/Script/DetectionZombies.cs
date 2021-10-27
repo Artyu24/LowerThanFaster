@@ -9,6 +9,7 @@ public class DetectionZombies : MonoBehaviour
     public GameObject Range;
     public float rangeMax;
     public float rangeMin;
+    private Deplacement1 deplacement;
 
 
     private void Update()
@@ -27,14 +28,16 @@ public class DetectionZombies : MonoBehaviour
     //Cela permettra de savoir si les zombies se baladent aléatoirement ou non
     private void OnTriggerEnter2D(Collider2D collision_in)
     {
-        if (collision_in.CompareTag("Player"))
+        isRunning = deplacement.sprint;
+
+        if (collision_in.CompareTag("Player")&&isRunning)
         {//Penser à rajouter un système permettant de vérifier qu'il n'y a pas d'obstacle entre les zombies et le joueur
             detected = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")&&isRunning)
         {
             detected = false;
         }

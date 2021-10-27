@@ -7,7 +7,8 @@ public class DégatsZombies : MonoBehaviour
     private bool zombieInRange = false;
     VieDuJoueur vieDuJoueur;
     public int damage=20;
-    public bool angry = true; //a adapter selon le script de detection
+    private Deplacement1 deplacement;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class DégatsZombies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((zombieInRange)&&(angry)) //le joueur est dans le box collider du zombie et le zombie l'a decouvert
+        if ((zombieInRange)&&(deplacement.sprint)) //le joueur est dans le box collider du zombie et le zombie l'a decouvert
             vieDuJoueur.TakeDamage(damage);
     }
 
