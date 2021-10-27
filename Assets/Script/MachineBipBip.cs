@@ -7,8 +7,13 @@ public class MachineBipBip : MonoBehaviour
     public bool machineReceived;
     private bool nextBip;
     public int bipTiming;
-    public GameObject Player;
-    public GameObject Item;
+    public GameObject player;
+    public GameObject item;
+    public AudioSource sound;
+    private bool cercleLoin;
+    private bool cercleProche;
+    private bool cercleMoyen;
+
     void Start()
     {
         //Initialise le fait que le bipeur n'ait pas possédé par le joueur
@@ -21,20 +26,15 @@ public class MachineBipBip : MonoBehaviour
     {
         if (machineReceived && nextBip)
         {
-            //
-            float distance;
-            //Relance la coroutine dès que celle-ci se finit
+            
+            //Relance la coroutine dès que celle-ci se finit 
             TestDistance();
             nextBip = false;
         }
     }
     IEnumerator TestDistance()
     {
-        if (2==2)
-        {
-            //Travail encore à faire
-            //Il faut augmenter la fréquence des bips en fonction de la distance avec l'item
-        }
+        
         yield return new WaitForSeconds(bipTiming);
         nextBip = true;
     }
