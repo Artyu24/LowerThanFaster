@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Deplacement1 : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private float speed;
+    public float speed;
     private Vector3 velocity = Vector3.zero;
-
     public float VitesseBase;
     public float VitesseSprint;
-    public bool sprint;
+    public bool sprint=false;
+
+    
 
     // Update is called once per frame
-      private void FixedUpdate()
+    public void FixedUpdate()
       {
             //code pour le sprint
             if (Input.GetKey(KeyCode.LeftControl))
