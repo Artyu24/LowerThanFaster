@@ -138,7 +138,6 @@ MonoBehaviour:
   moveSpeedEnemy: 150
   rbEnemy: {fileID: -8907039720104834671}
   detectionZombies: {fileID: 2823852742150322429}
-  player: {fileID: 7530425392678294790, guid: cd67ced4cf7b0094889928d2770ca681, type: 3}
   zombies: {fileID: 3551254750902553997}
 --- !u!1 &4338068488291878470
 GameObject:
@@ -151,6 +150,7 @@ GameObject:
   - component: {fileID: 1289529956482495566}
   - component: {fileID: 3505677731896913468}
   - component: {fileID: 2823852742150322429}
+  - component: {fileID: 3216829208669139054}
   m_Layer: 0
   m_Name: RangeZombie
   m_TagString: Untagged
@@ -201,7 +201,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detected: 0
-  isRunning: 0
   Range: {fileID: 4338068488291878470}
   rangeMax: 2
   rangeMin: 1
+--- !u!114 &3216829208669139054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4338068488291878470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c429c5115b208504b9d4949987651c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20

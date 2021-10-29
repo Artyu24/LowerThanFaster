@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("Spawn Point")]
     public GameObject[] spawnPointObject;
 
-    private GameObject[] objectToFind;
+    public GameObject[] objectToFind;
 
     private void Start()
     {
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
                 }
             }
             objectToFind[i] = listObject[randomItem];
+            Debug.Log(listObject[randomItem]);
         }
     }
 
