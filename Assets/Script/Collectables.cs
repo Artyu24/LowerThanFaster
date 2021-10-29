@@ -17,6 +17,12 @@ public class Collectables : MonoBehaviour
     public Image visuel2;
     public Image visuel3;
     public Image visuel4;
+    public Image visuel5;
+    public Image visuel6;
+    public Image visuel7;
+    public Image visuel8;
+    public Image visuel9;
+    public Image visuel10;
 
     private int nbImages = 0; // chaque case de l'inventaire prise oblige les autres à se decaler
     Vector3 delta = new Vector3(50, 0, 0); //decalement de x=+70 vers la droite pour chaque enplacement occupé
@@ -52,6 +58,44 @@ public class Collectables : MonoBehaviour
                         visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
                         visuel4.gameObject.SetActive(true); 
                         break; }
+                case "Objet5":
+                    {
+                        visuel5.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel5.gameObject.SetActive(true);
+                        break;
+                    }
+                case "Objet6":
+                    {
+                        visuel6.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel6.gameObject.SetActive(true);
+                        break;
+                    }
+                case "Objet7":
+                    {
+                        visuel7.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel7.gameObject.SetActive(true);
+                        break;
+                    }
+                case "Objet8":
+                    {
+                        visuel8.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel8.gameObject.SetActive(true);
+                        break;
+                    }
+                case "Objet9":
+                    {
+                        visuel9.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel9.gameObject.SetActive(true);
+                        break;
+                    }
+                case "Objet10":
+                    {
+                        visuel10.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel10.gameObject.SetActive(true);
+                        break;
+                    }
+
+
             }
             nbImages++; //un objet recupéré en plus
             
