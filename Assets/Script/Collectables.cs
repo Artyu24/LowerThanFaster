@@ -60,38 +60,38 @@ public class Collectables : MonoBehaviour
                         break; }
                 case "Objet5":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel5.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel5.gameObject.SetActive(true);
                         break;
                     }
                 case "Objet6":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel6.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel6.gameObject.SetActive(true);
                         break;
                     }
                 case "Objet7":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel7.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel7.gameObject.SetActive(true);
                         break;
                     }
                 case "Objet8":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel8.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel8.gameObject.SetActive(true);
                         break;
                     }
                 case "Objet9":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel9.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel9.gameObject.SetActive(true);
                         break;
                     }
                 case "Objet10":
                     {
-                        visuel4.rectTransform.localPosition = positionInventaire + delta * nbImages;
-                        visuel4.gameObject.SetActive(true);
+                        visuel10.rectTransform.localPosition = positionInventaire + delta * nbImages;
+                        visuel10.gameObject.SetActive(true);
                         break;
                     }
 
