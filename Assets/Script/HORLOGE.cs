@@ -29,6 +29,6 @@ public class HORLOGE : MonoBehaviour
             yield return new WaitForSeconds(1);
             gameObject.transform.Rotate(new Vector3(0, 0, -timeToPlay));
         }
-
+        GameManager.instance.isDead = true;
     }
 }
