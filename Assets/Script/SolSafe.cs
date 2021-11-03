@@ -24,15 +24,10 @@ public class SolSafe : MonoBehaviour
 
     void GentilsZombies()
     {
-
-
         DetectionZombies[] tabZombies = FindObjectsOfType<DetectionZombies>();
-        Debug.Log("Liste de zombies établie : " + tabZombies.Length);
         foreach(DetectionZombies zombie in tabZombies)
         {
-            Debug.Log("Zombie reset");
             zombie.detected = false;
-            Debug.Log(zombie.detected);
         }
     }
 
@@ -41,7 +36,6 @@ public class SolSafe : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Zone safe");
             StartCoroutine(ActivationZoneSafe());
         }
     }
