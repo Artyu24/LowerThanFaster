@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 521086097549045280}
   - component: {fileID: 8404950402519667715}
   - component: {fileID: 3217437504109502008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objet2
   m_TagString: Collectable
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5097453172983781063}
   - component: {fileID: -8907039720104834671}
   - component: {fileID: 1361327668492823663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3505677731896913468}
   - component: {fileID: 2823852742150322429}
   - component: {fileID: 3216829208669139054}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RangeZombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
