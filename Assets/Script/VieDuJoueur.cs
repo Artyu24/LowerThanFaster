@@ -20,7 +20,7 @@ public class VieDuJoueur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(gameObject.layer);
     }
 
     public void TakeDamage(int damage)
@@ -37,7 +37,9 @@ public class VieDuJoueur : MonoBehaviour
 
     IEnumerator Immunité()
     {
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 6, true);
         yield return new WaitForSeconds(3);
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);
         immunité = false;
     }
 

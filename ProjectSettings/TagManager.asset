@@ -7,6 +7,9 @@ TagManager:
   - Collectable
   - Floor
   - Zombie
+  - Music
+  - MusicItem
+  - MapItem
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - MAP
-  - 
+  - Mur
   - 
   - 
   - 

@@ -33,19 +33,9 @@ public class DetectionZombies : MonoBehaviour
     //Cela permettra de savoir si les zombies se baladent aléatoirement ou non
     private void OnTriggerEnter2D(Collider2D collision_in)
     {
-
-        
-
-        if (collision_in.CompareTag("Player")&& player.GetComponent<Deplacement1>().sprint)
+        if (collision_in.CompareTag("Player"))
         {//Penser à rajouter un système permettant de vérifier qu'il n'y a pas d'obstacle entre les zombies et le joueur
             detected = true; 
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")&& player.GetComponent<Deplacement1>().sprint)
-        {
-            detected = false;
         }
     }
 }

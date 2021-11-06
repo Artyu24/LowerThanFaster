@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Object")]
     public GameObject[] listObject;
+    public GameObject[] ListBonusObjects;
 
     [Header("Spawn Point")]
     public GameObject[] spawnPointObject;
@@ -33,6 +34,16 @@ public class GameManager : MonoBehaviour
                 random = Random.Range(0, spawnPointObject.Length);
             Instantiate(collectable, spawnPointObject[random].transform.position, Quaternion.identity);
             spawnPointObject[random].transform.position = new Vector3(0,0,0);
+            Destroy(spawnPointObject[random]);
+        }
+
+        foreach (GameObject collectable in ListBonusObjects)
+        {
+            int random = Random.Range(0, spawnPointObject.Length);
+            while (spawnPointObject[random].transform.position == new Vector3(0, 0, 0))
+                random = Random.Range(0, spawnPointObject.Length);
+            Instantiate(collectable, spawnPointObject[random].transform.position, Quaternion.identity);
+            spawnPointObject[random].transform.position = new Vector3(0, 0, 0);
             Destroy(spawnPointObject[random]);
         }
 

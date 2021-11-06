@@ -6,7 +6,7 @@ public class MachineBipBip : MonoBehaviour
 {
     public AudioSource sound;
 
-    public Transform point;
+    private Transform point;
 
     public float radiusLoin;
     public float radiusMoyen;
@@ -20,29 +20,49 @@ public class MachineBipBip : MonoBehaviour
 
     private bool secuCoroutine;
 
+    void Awake()
+    {
+        sound = this.gameObject.GetComponent<AudioSource>();
+        point = this.gameObject.transform;
+    }
+
     void Update()
     {
         cercleLoin = Physics2D.OverlapCircle(point.position, radiusLoin, playerLayer);
         cercleMoyen = Physics2D.OverlapCircle(point.position, radiusMoyen, playerLayer);
         cercleProche = Physics2D.OverlapCircle(point.position, radiusProche, playerLayer);
 
-        if (cercleProche && !secuCoroutine)
+        if (cercleProche)
         {
-            StartCoroutine(TestDistance(0.5f));
+            sound.volume = MusicManager.instance.volumeMusic;
+            if (!secuCoroutine)
+                StartCoroutine(TestDistance(0.2f));
         }
-        else if (cercleMoyen && !secuCoroutine)
+        else if (cercleMoyen)
         {
-            StartCoroutine(TestDistance(1));
+            sound.volume = MusicManager.instance.volumeMusic - 0.4f;
+            if (!secuCoroutine)
+                StartCoroutine(TestDistance(0.75f));
         }
-        else if (cercleLoin && !secuCoroutine)
+        else if (cercleLoin)
         {
-            StartCoroutine(TestDistance(2));
+            sound.volume = MusicManager.instance.volumeMusic - 0.8f;
+            if(!secuCoroutine)
+                StartCoroutine(TestDistance(1.5f));
         }
+        else
+        {
+            sound.volume = 0;
+        }
+
+        Debug.Log("VOLUME : " + sound.volume);
     }
     IEnumerator TestDistance(float time)
     {
         secuCoroutine = true;
+        sound.Stop();
         sound.Play();
+        Debug.Log("MUSIIIIC");
         yield return new WaitForSeconds(time);
         secuCoroutine = false;
     }
