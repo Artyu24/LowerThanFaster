@@ -34,7 +34,7 @@ public class EnemyDeplacement : MonoBehaviour
             bool test4 = player.GetComponent<Transform>().position.y < zombies.GetComponent<Transform>().position.y;
             verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test3 ? 1 : test4 ? -1 : 0);
         }
-        else if (Random.Range(0,1000)<=10) 
+        else if (Random.Range(0,1000)<=10)
         {
             // Détermine aléatoirement le prochain déplacement des ennemis en fonction de leur vitesse
             horizontalMovement = Random.Range(-1, 2) * moveSpeedEnemy/2 * Time.fixedDeltaTime;
@@ -45,5 +45,15 @@ public class EnemyDeplacement : MonoBehaviour
 
         //Permet au personnage de se déplacer de façon progressive allant de sa position au vecteur déclarer au dessus
         rbEnemy.velocity = Vector3.SmoothDamp(rbEnemy.velocity, targetVelocity, ref velocity, .05f);
+
+
+        //Orientation du sprite
+        if (horizontalMovement < 0)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        else if (horizontalMovement > 0)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        
+
+
     }
 }

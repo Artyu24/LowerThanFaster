@@ -8,6 +8,15 @@ public class SettingMenu : MonoBehaviour
     Resolution[] resolutions;
     public Dropdown resolutionDropdown;
     public GameObject SettingsWindow;
+
+    public Slider musicSlider;
+
+    private void Awake()
+    {
+        musicSlider.value = MusicManager.instance.volumeMusic;
+        audioMixer.SetFloat("volume", MusicManager.instance.volumeMusic);
+    }
+
     public void Start()
     {
         resolutions = Screen.resolutions;
@@ -34,6 +43,7 @@ public class SettingMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        MusicManager.instance.volumeMusic = volume;
     }
     public void SetFullScreen(bool isFullscreen)
     {

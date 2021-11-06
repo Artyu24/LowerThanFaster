@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1262990575}
   - component: {fileID: 1262990574}
   - component: {fileID: 1262990577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 70460506730949217}
   - component: {fileID: -8684757069883626070}
   - component: {fileID: 2277689114595265165}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -267,6 +267,12 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   spriteDuJoueur: {fileID: 7530425392678294789}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &-8684757069883626070
 MonoBehaviour:
   m_ObjectHideFlags: 0
