@@ -19,7 +19,7 @@ public class EcranDebut : MonoBehaviour
 
     void Start()
     {
-
+            Time.timeScale = 0;
     }
     
     void Update()
@@ -27,7 +27,7 @@ public class EcranDebut : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.Space)) && page2)
         {
-
+            Time.timeScale = 1;
             healthbar.SetActive(true);
             horloge.SetActive(true);
             Destroy(gameObject);
