@@ -66,6 +66,12 @@ public class Collectables : MonoBehaviour
             StartCoroutine(Obtenu());
             Destroy(objet);// un message "est obtenu" reste 2 secondes
         }
+
+        if (placeUI == GameManager.instance.nbrObjectToFind)
+        {
+            GameObject victoire = GameObject.FindGameObjectWithTag("VICTORY");
+            victoire.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

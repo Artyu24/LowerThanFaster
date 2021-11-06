@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VieDuJoueur : MonoBehaviour
 {
@@ -17,12 +18,6 @@ public class VieDuJoueur : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(gameObject.layer);
-    }
-
     public void TakeDamage(int damage)
     {
         if (immunité == false)
@@ -32,10 +27,14 @@ public class VieDuJoueur : MonoBehaviour
             immunité = true;
             StartCoroutine(FlashImmunité());
             StartCoroutine(Immunité());
+            if (currentHealth <= 0)
+            {
+                SceneManager.LoadScene("Death");
+            }
         }
     }
 
-    IEnumerator Immunité()
+        IEnumerator Immunité()
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, true);
         yield return new WaitForSeconds(3);
