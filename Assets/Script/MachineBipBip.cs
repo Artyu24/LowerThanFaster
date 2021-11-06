@@ -54,15 +54,12 @@ public class MachineBipBip : MonoBehaviour
         {
             sound.volume = 0;
         }
-
-        Debug.Log("VOLUME : " + sound.volume);
     }
     IEnumerator TestDistance(float time)
     {
         secuCoroutine = true;
         sound.Stop();
         sound.Play();
-        Debug.Log("MUSIIIIC");
         yield return new WaitForSeconds(time);
         secuCoroutine = false;
     }
