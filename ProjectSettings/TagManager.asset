@@ -10,6 +10,7 @@ TagManager:
   - Music
   - MusicItem
   - MapItem
+  - VICTORY
   layers:
   - Default
   - TransparentFX

@@ -17,12 +17,6 @@ public class VieDuJoueur : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(gameObject.layer);
-    }
-
     public void TakeDamage(int damage)
     {
         if (immunité == false)
