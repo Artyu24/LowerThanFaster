@@ -13,6 +13,7 @@ public class DeathMenu : MonoBehaviour
 
     public void Retry()
     {
+        
         SceneManager.LoadScene(levelToload);
         Time.timeScale = 1;
     }
