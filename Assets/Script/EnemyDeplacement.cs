@@ -45,5 +45,15 @@ public class EnemyDeplacement : MonoBehaviour
 
         //Permet au personnage de se déplacer de façon progressive allant de sa position au vecteur déclarer au dessus
         rbEnemy.velocity = Vector3.SmoothDamp(rbEnemy.velocity, targetVelocity, ref velocity, .05f);
+
+
+        //Orientation du sprite
+        if (horizontalMovement < 0)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        else if (horizontalMovement > 0)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        
+
+
     }
 }

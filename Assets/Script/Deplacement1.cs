@@ -40,13 +40,9 @@ public class Deplacement1 : MonoBehaviour
 
         //orientation du personnage
         if (horizontalInput < 0)
-        {
             transform.eulerAngles = new Vector3(0, 0, 0);
-        }
         else if (horizontalInput > 0)
-        {
             transform.eulerAngles = new Vector3(0, 180, 0);
-        }
 
     }
  }
