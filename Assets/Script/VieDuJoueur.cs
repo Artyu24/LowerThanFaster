@@ -20,7 +20,8 @@ public class VieDuJoueur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (currentHealth <=0)
+        GameManager.instance.isDead = true;
     }
 
     public void TakeDamage(int damage)
