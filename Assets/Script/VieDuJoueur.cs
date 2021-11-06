@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VieDuJoueur : MonoBehaviour
 {
@@ -26,10 +27,14 @@ public class VieDuJoueur : MonoBehaviour
             immunité = true;
             StartCoroutine(FlashImmunité());
             StartCoroutine(Immunité());
+            if (currentHealth <= 0)
+            {
+                SceneManager.LoadScene("Death");
+            }
         }
     }
 
-    IEnumerator Immunité()
+        IEnumerator Immunité()
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, true);
         yield return new WaitForSeconds(3);

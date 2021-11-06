@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e42daf9b44034b9950821bc9e60c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToload: Tilemap
+  levelToload: LD
 --- !u!4 &443668496
 Transform:
   m_ObjectHideFlags: 0
