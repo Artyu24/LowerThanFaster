@@ -992,7 +992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &681987115
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681987114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.33, y: 0.61, z: 0}
+  m_LocalPosition: {x: 0.62, y: -3.09, z: 0}
   m_LocalScale: {x: 0.9384862, y: 0.8187253, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1332,7 +1332,7 @@ GameObject:
   - component: {fileID: 904546387}
   - component: {fileID: 904546388}
   - component: {fileID: 904546384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerTest
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1455,7 +1455,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14121652, y: 0.030577838}
+  m_Offset: {x: -0.011406153, y: 0.030577838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1466,7 +1466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.93275404, y: 1.113243}
+  m_Size: {x: 0.6275087, y: 1.113243}
   m_EdgeRadius: 0
 --- !u!114 &904546387
 MonoBehaviour:
@@ -1481,6 +1481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 182390785}
+  radiusWrongItem: 1000
+  nbEnemy: 0
   visuel: []
 --- !u!114 &904546388
 MonoBehaviour:
@@ -1759,6 +1761,10 @@ PrefabInstance:
     - target: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
       propertyPath: m_TagString
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097453172983781063, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6935735267309428584, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
       propertyPath: m_RootOrder
@@ -3088,7 +3094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2088638272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3102,6 +3108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 182390785}
+  radiusWrongItem: 0
+  nbEnemy: 0
   visuel: []
 --- !u!61 &2088638273
 BoxCollider2D:
@@ -3188,7 +3196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088638271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.13, y: 0.73, z: 0}
+  m_LocalPosition: {x: -1.97, y: -3.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
