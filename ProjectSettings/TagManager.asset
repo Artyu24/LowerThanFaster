@@ -7,6 +7,8 @@ TagManager:
   - Collectable
   - Floor
   - Zombie
+  - Healthbar
+  - Horloge
   layers:
   - Default
   - TransparentFX
