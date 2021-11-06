@@ -14,7 +14,6 @@ public class DégatsZombies : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     // Update is called once per frame

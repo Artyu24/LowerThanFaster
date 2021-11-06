@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Collectables : MonoBehaviour
 {
-
     private bool isInRange;  
     public Text message; //indication "appuyer sur F"
 
@@ -35,7 +34,22 @@ public class Collectables : MonoBehaviour
             }
             if (isInList==false)
             {
-                //malus à rajouter
+                if (objet.tag == "MusicItem")
+                {
+                    GameObject[] aled = GameObject.FindGameObjectsWithTag("Collectable");
+                    for (int i = 0; i < aled.Length; i++)
+                    {
+                        foreach (GameObject menfou in GameManager.instance.objectToFind)
+                        {
+                            if (aled[i].GetComponent<SpriteRenderer>().sprite == menfou.GetComponent<SpriteRenderer>().sprite)
+                                aled[i].GetComponent<MachineBipBip>().enabled = true;
+                        }
+                    }
+                }
+                else if (objet.tag == "MapItem")
+                {
+                    MiniMap.instance.canActivateMinimap = true;
+                }
             }
             StartCoroutine(Obtenu());
             Destroy(objet);// un message "est obtenu" reste 2 secondes
@@ -44,20 +58,19 @@ public class Collectables : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag=="Collectable")
+        if (collision.gameObject.tag=="Collectable" || collision.gameObject.tag == "MusicItem" || collision.gameObject.tag == "MapItem")
         {
             nomObjet = collision.transform.name; 
             objet = GameObject.Find(nomObjet); //on identifie l'objet trouvé
             message.text = "Appuyer \"F\" pour ramasser l'objet"; //(ré)initialisation
             message.gameObject.SetActive(true); //le message apparait
-            isInRange = true; 
-            
+            isInRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Collectable")
+        if (collision.gameObject.tag == "Collectable" || collision.gameObject.tag == "MusicItem" || collision.gameObject.tag == "MapItem")
         {
             objet = null; //on remet l'objet enregistré à 0
             isInRange = false;

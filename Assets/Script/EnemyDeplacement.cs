@@ -34,7 +34,7 @@ public class EnemyDeplacement : MonoBehaviour
             bool test4 = player.GetComponent<Transform>().position.y < zombies.GetComponent<Transform>().position.y;
             verticalMovement = moveSpeedEnemy * Time.fixedDeltaTime * (test3 ? 1 : test4 ? -1 : 0);
         }
-        else if (Random.Range(0,1000)<=10) 
+        else if (Random.Range(0,1000)<=10)
         {
             // Détermine aléatoirement le prochain déplacement des ennemis en fonction de leur vitesse
             horizontalMovement = Random.Range(-1, 2) * moveSpeedEnemy/2 * Time.fixedDeltaTime;
