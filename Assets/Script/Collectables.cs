@@ -5,19 +5,17 @@ using UnityEngine.UI;
 
 public class Collectables : MonoBehaviour
 {
-    private bool isInRange;  
+    private bool isInRange;
     public Text message; //indication "appuyer sur F"
     public float radiusWrongItem;
 
-    public int nbEnemy = 0;
-
     private GameObject objet = null; //le dernier objet rencontré par le joueur
     private string nomObjet; //son nom 
-    private bool enDestruction=false;
+    private bool enDestruction = false;
 
     public Image[] visuel;
-    private int placeUI=0;
-    private bool isInList=false;
+    private int placeUI = 0;
+    private bool isInList = false;
 
     void Update()
     {
@@ -31,22 +29,23 @@ public class Collectables : MonoBehaviour
                     visuel[placeUI].sprite = objet.GetComponent<SpriteRenderer>().sprite;
                     visuel[placeUI].gameObject.SetActive(true);
                     placeUI++;
-                    isInList  =  true;
+                    isInList = true;
                 }
-                
+
             }
-            if (isInList==false)
+            if (isInList == false)
             {
-                /* 
                 Collider2D[] lightningEnemy = Physics2D.OverlapCircleAll(gameObject.transform.position, radiusWrongItem);
                 foreach (Collider2D enemy in lightningEnemy)
                 {
-                    enemy.gameObject.GetComponent<DetectionZombies>().detected = true;
-                    nbEnemy++;
-                } */
+                    foreach (Transform child in enemy.transform)
+                    {
+                        child.gameObject.GetComponent<DetectionZombies>().detected = true;
+                    }
+                }
 
 
-                    if (objet.tag == "MusicItem")
+                if (objet.tag == "MusicItem")
                 {
                     GameObject[] aled = GameObject.FindGameObjectsWithTag("Collectable");
                     for (int i = 0; i < aled.Length; i++)
@@ -76,9 +75,9 @@ public class Collectables : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag=="Collectable" || collision.gameObject.tag == "MusicItem" || collision.gameObject.tag == "MapItem")
+        if (collision.gameObject.tag == "Collectable" || collision.gameObject.tag == "MusicItem" || collision.gameObject.tag == "MapItem")
         {
-            nomObjet = collision.transform.name; 
+            nomObjet = collision.transform.name;
             objet = GameObject.Find(nomObjet); //on identifie l'objet trouvé
             message.text = "Appuyer \"F\" pour ramasser l'objet"; //(ré)initialisation
             message.gameObject.SetActive(true); //le message apparait
@@ -108,6 +107,12 @@ public class Collectables : MonoBehaviour
         enDestruction = false;
         if (message.text == "Objet obtenu!") //si on est entré dans la zone d'un autre objet et que le message s'est reset, il doit resté affiché et non pas disparaitre
             message.gameObject.SetActive(false);
-        
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(gameObject.transform.position, radiusWrongItem);
     }
 }
