@@ -7,6 +7,9 @@ public class Collectables : MonoBehaviour
 {
     private bool isInRange;  
     public Text message; //indication "appuyer sur F"
+    public float radiusWrongItem;
+
+    public int nbEnemy = 0;
 
     private GameObject objet = null; //le dernier objet rencontré par le joueur
     private string nomObjet; //son nom 
@@ -34,7 +37,16 @@ public class Collectables : MonoBehaviour
             }
             if (isInList==false)
             {
-                if (objet.tag == "MusicItem")
+                /* 
+                Collider2D[] lightningEnemy = Physics2D.OverlapCircleAll(gameObject.transform.position, radiusWrongItem);
+                foreach (Collider2D enemy in lightningEnemy)
+                {
+                    enemy.gameObject.GetComponent<DetectionZombies>().detected = true;
+                    nbEnemy++;
+                } */
+
+
+                    if (objet.tag == "MusicItem")
                 {
                     GameObject[] aled = GameObject.FindGameObjectsWithTag("Collectable");
                     for (int i = 0; i < aled.Length; i++)
