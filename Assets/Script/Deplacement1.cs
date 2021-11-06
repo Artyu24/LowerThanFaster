@@ -37,5 +37,16 @@ public class Deplacement1 : MonoBehaviour
             Vector3 targetVelocity2 = new Vector2(rb.velocity.x, verticalInput);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity2, ref velocity, .05f);
 
-       }
+
+        //orientation du personnage
+        if (horizontalInput < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (horizontalInput > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
+    }
  }
