@@ -14,6 +14,7 @@ public class VieDuJoueur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -27,6 +28,10 @@ public class VieDuJoueur : MonoBehaviour
             immunité = true;
             StartCoroutine(FlashImmunité());
             StartCoroutine(Immunité());
+            if (currentHealth <= 0)
+            {
+                SceneManager.LoadScene("Death");
+            }
         }
     }
 
@@ -36,10 +41,6 @@ public class VieDuJoueur : MonoBehaviour
         yield return new WaitForSeconds(3);
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);
         immunité = false;
-        if (currentHealth <= 0)
-        {
-            SceneManager.LoadScene("Death");
-        }
     }
 
     IEnumerator FlashImmunité()
