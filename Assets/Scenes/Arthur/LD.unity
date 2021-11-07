@@ -19768,8 +19768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -457}
-  m_SizeDelta: {x: 566.8044, y: 143.247}
+  m_AnchoredPosition: {x: -5.5777, y: -438}
+  m_SizeDelta: {x: 1404.832, y: 143.247}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965242764
 MonoBehaviour:
@@ -20870,7 +20870,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6db80ac45f464f045845ea48d0816232, type: 3}
-    m_FontSize: 90
+    m_FontSize: 85
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -20883,9 +20883,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Utilisez les fl\xE8ches directionnelles pour vous diriger et ctrl gauche
     pour courir. \nVous avez 3 minutes pour r\xE9unir tout les objets suivants :
-    \n\n\n\nLa mini map    v      et la baguette magique \npourrons \xE9galement
-    vous \xEAtre utile.. mais ne vous encombrez pas du reste!\n-Appuyez sur espace
-    pour commencer-"
+    \n\n\n\nLa mini map          qui s'active avec M une fois trouv\xE9e et la baguette
+    magique          pourrons \xE9galement vous \xEAtre utile.. mais ne vous encombrez
+    pas du reste!\nEchap vous permettra de faire pause \xE0 tout moment.\n-Appuyez
+    sur espace pour commencer-"
 --- !u!222 &1046702918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21544,8 +21545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 633, y: -114.94}
-  m_SizeDelta: {x: 159, y: 167.908}
+  m_AnchoredPosition: {x: -67.5, y: -193}
+  m_SizeDelta: {x: 135, y: 95.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067945413
 MonoBehaviour:
@@ -27434,10 +27435,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Bienvenue dans The Walking Undead !\nVous \xEAtes le dernier survivant
     de l'apocalypse zombie, et il faut vous fondre parmi les zombies pour trouver
-    le materiel n\xE9cessaire \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nCherchez
-    les quatres objets demand\xE9s en faisant attention \xE0 ne pas vous encombrer
-    des autres, et \xE9vitez de courir ou de trop approcher les zombies pour ne pas
-    vous faire d\xE9masqu\xE9..\n\n-Appuyez sur espace pour continuer-"
+    les 4 objets n\xE9cessaire \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nEvitez
+    de courir ou de trop approcher les zombies pour ne pas vous faire d\xE9masquer..
+    Rester pendant 5 secondes dans les salles saintes vous permettera de vous faire
+    oublier des zombies qui vous ont remarqu\xE9s.\n\n-Appuyez sur espace pour continuer-"
 --- !u!222 &1223966067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -98089,8 +98090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.99997, y: -120.969986}
-  m_SizeDelta: {x: 159.571, y: 155.848}
+  m_AnchoredPosition: {x: -470.73, y: -102}
+  m_SizeDelta: {x: 140.541, y: 120.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040873508
 MonoBehaviour:
