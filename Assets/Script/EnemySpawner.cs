@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public int numberEnemy;
-    public int Hardeur;
+    public int Difficulty;
 
     public GameObject enemy;
 
     void Start()
     {
-        switch (Hardeur)
+        Difficulty = MainMenu.Hardeur;
+        switch (Difficulty)
         {
             case 2:
                 numberEnemy += 10;

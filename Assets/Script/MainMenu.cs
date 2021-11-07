@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public static MainMenu instance;
     public string levelToload;
     public GameObject SettingsWindow;
-    public int Hardeur;
+    public static int Hardeur;
+
 
     public void StartGame()
     {
@@ -25,6 +25,6 @@ public class MainMenu : MonoBehaviour
     }
     public void Difficulty(int Dif)
     {
-        Hardeur = Dif;
+        Hardeur =Dif;
     }
 }
