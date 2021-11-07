@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < numberEnemy; i++)
         {
-            Instantiate(enemy, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(enemy, gameObject.transform.position, gameObject.transform.rotation); 
         }
     }
 }

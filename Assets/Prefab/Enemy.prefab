@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -8907039720104834671}
   - component: {fileID: 1361327668492823663}
   - component: {fileID: -6862568687986353392}
-  - component: {fileID: 6718999712132256419}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Zombie
@@ -34,6 +33,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 4}
   m_Children:
   - {fileID: 1289529956482495566}
+  - {fileID: 384029850589435137}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,7 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedEnemy: 80
   rbEnemy: {fileID: -8907039720104834671}
-  detectionZombies: {fileID: 2823852742150322429}
+  detectionZombies: {fileID: 3813110713939264285}
+  detectionZombies2: {fileID: 6360040082601125221}
   zombies: {fileID: 3551254750902553997}
 --- !u!111 &-6862568687986353392
 Animation:
@@ -157,32 +158,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!61 &6718999712132256419
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3551254750902553997}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.27, y: 0.39}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.39}
-  m_EdgeRadius: 0
 --- !u!1 &4338068488291878470
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,11 +168,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1289529956482495566}
   - component: {fileID: 3505677731896913468}
-  - component: {fileID: 2823852742150322429}
-  - component: {fileID: 3216829208669139054}
+  - component: {fileID: 3813110713939264285}
   m_Layer: 6
   m_Name: RangeZombie
-  m_TagString: Untagged
+  m_TagString: RangeZombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +206,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &2823852742150322429
+--- !u!114 &3813110713939264285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,18 +220,93 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   Range: {fileID: 4338068488291878470}
-  rangeMax: 3
+  rangeMax: 2
   rangeMin: 1
---- !u!114 &3216829208669139054
+--- !u!1 &8690789533304907694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384029850589435137}
+  - component: {fileID: 2314210899538158508}
+  - component: {fileID: 6630516907113726617}
+  - component: {fileID: 6360040082601125221}
+  m_Layer: 6
+  m_Name: AttaqueZombie
+  m_TagString: AttaqueZombie
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384029850589435137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690789533304907694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6935735267309428584}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2314210899538158508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4338068488291878470}
+  m_GameObject: {fileID: 8690789533304907694}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c429c5115b208504b9d4949987651c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!61 &6630516907113726617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690789533304907694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0066545904, y: 0.005941868}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6799925, y: 0.8216057}
+  m_EdgeRadius: 0
+--- !u!114 &6360040082601125221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690789533304907694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6485c900804d1154ebc54cefd997976c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detected: 0
+  Range: {fileID: 4338068488291878470}
+  rangeMax: 3
+  rangeMin: 1
