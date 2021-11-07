@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &8748063
 MonoBehaviour:
@@ -2396,7 +2396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &154288543
 GameObject:
@@ -4156,7 +4156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
   m_SizeDelta: {x: -0.00012207, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &243010853
@@ -5344,7 +5344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &297614918
 MonoBehaviour:
@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 9
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &328486183
 BoxCollider2D:
@@ -6841,7 +6841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 1.1929932}
+  m_AnchoredPosition: {x: 0, y: 1.1929932}
   m_SizeDelta: {x: 0, y: 2.386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389744739
@@ -7120,7 +7120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &409590650
 GameObject:
@@ -15758,7 +15758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &718221439
 MonoBehaviour:
@@ -17083,7 +17083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 3
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &812932272
 BoxCollider2D:
@@ -19401,7 +19401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToload: MainMenu
   SettingsWindow: {fileID: 0}
-  Hardeur: 0
 --- !u!114 &945264681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20592,7 +20591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1030380537
 GameObject:
@@ -21106,7 +21105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1054502747
 MonoBehaviour:
@@ -28274,7 +28273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 4
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1302981143
 BoxCollider2D:
@@ -28701,7 +28700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1329790276
 BoxCollider2D:
@@ -30825,7 +30824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 3
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1413760301
 MonoBehaviour:
@@ -83512,7 +83511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1529489465
 MonoBehaviour:
@@ -83712,7 +83711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1558853034
 GameObject:
@@ -83761,7 +83760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 8
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1558853037
 BoxCollider2D:
@@ -91202,7 +91201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1630811674
 GameObject:
@@ -94890,7 +94889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 4
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1868755589
 MonoBehaviour:
@@ -96157,7 +96156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1888463305
 GameObject:
@@ -96942,7 +96941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 8
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1935455048
 MonoBehaviour:
@@ -116674,6 +116673,7 @@ MonoBehaviour:
   VitesseBase: 100
   VitesseSprint: 250
   sprint: 0
+  animator: {fileID: 7530425393894121779}
 --- !u!61 &7530425393894121776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -116691,8 +116691,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35714287, y: 1.2857143}
-    newSize: {x: 0.35714287, y: 1.2857143}
+    oldSize: {x: 0.78333336, y: 0.93333334}
+    newSize: {x: 0.94, y: 1.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -116740,12 +116740,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 4334783836991956000, guid: 736b8f726ad05bb4cb6fa7b4fffc34bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0867b46905acc0545b948d202bcb74e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.35714287, y: 1.2857143}
+  m_Size: {x: 0.94, y: 1.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -116766,6 +116766,7 @@ GameObject:
   - component: {fileID: 70460508216254037}
   - component: {fileID: 538614965772097950}
   - component: {fileID: 2277689115274231481}
+  - component: {fileID: 7530425393894121779}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -116773,6 +116774,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7530425393894121779
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7530425393894121778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62a31ec37fdc1f14aa423a2cfa57e1e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &7530425393894121782
 Transform:
   m_ObjectHideFlags: 0
@@ -116781,7 +116801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7530425393894121778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.96, y: -5.14, z: 0}
+  m_LocalPosition: {x: 10.96, y: -5.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
