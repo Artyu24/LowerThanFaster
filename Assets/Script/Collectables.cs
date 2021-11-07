@@ -33,18 +33,8 @@ public class Collectables : MonoBehaviour
                 }
 
             }
-            if ((isInList == false)&&(objet.tag!="MusicItem")&&(objet.tag!="MapItem"))
+            if (isInList == false)
             {
-                Collider2D[] lightningEnemy = Physics2D.OverlapCircleAll(gameObject.transform.position, radiusWrongItem);
-                foreach (Collider2D enemy in lightningEnemy)
-                {
-                    foreach (Transform child in enemy.transform)
-                    {
-                        child.gameObject.GetComponent<DetectionZombies>().detected = true;
-                    }
-                }
-
-
                 if (objet.tag == "MusicItem")
                 {
                     GameObject[] aled = GameObject.FindGameObjectsWithTag("Collectable");
@@ -60,6 +50,17 @@ public class Collectables : MonoBehaviour
                 else if (objet.tag == "MapItem")
                 {
                     MiniMap.instance.canActivateMinimap = true;
+                }
+                else
+                {
+                    Collider2D[] lightningEnemy = Physics2D.OverlapCircleAll(gameObject.transform.position, radiusWrongItem);
+                    foreach (Collider2D enemy in lightningEnemy)
+                    {
+                        foreach (Transform child in enemy.transform)
+                        {
+                            child.gameObject.GetComponent<DetectionZombies>().detected = true;
+                        }
+                    }
                 }
             }
             StartCoroutine(Obtenu());

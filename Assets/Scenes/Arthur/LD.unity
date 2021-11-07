@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &8748063
 MonoBehaviour:
@@ -2396,7 +2396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &154288543
 GameObject:
@@ -5344,7 +5344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &297614918
 MonoBehaviour:
@@ -5963,7 +5963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 9
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &328486183
 BoxCollider2D:
@@ -7120,7 +7120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &409590650
 GameObject:
@@ -15758,7 +15758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &718221439
 MonoBehaviour:
@@ -17083,7 +17083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 3
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &812932272
 BoxCollider2D:
@@ -19401,7 +19401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToload: MainMenu
   SettingsWindow: {fileID: 0}
-  Hardeur: 0
 --- !u!114 &945264681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20592,7 +20591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1030380537
 GameObject:
@@ -20871,7 +20870,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6db80ac45f464f045845ea48d0816232, type: 3}
-    m_FontSize: 90
+    m_FontSize: 85
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -20884,9 +20883,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Utilisez les fl\xE8ches directionnelles pour vous diriger et ctrl gauche
     pour courir. \nVous avez 3 minutes pour r\xE9unir tout les objets suivants :
-    \n\n\n\nLa mini map    v      et la baguette magique \npourrons \xE9galement
-    vous \xEAtre utile.. mais ne vous encombrez pas du reste!\n-Appuyez sur espace
-    pour commencer-"
+    \n\n\n\nLa mini map          qui s'active avec M une fois trouv\xE9e et la baguette
+    magique          pourrons \xE9galement vous \xEAtre utile.. mais ne vous encombrez
+    pas du reste!\nEchap vous permettra de faire pause \xE0 tout moment.\n-Appuyez
+    sur espace pour commencer-"
 --- !u!222 &1046702918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21106,7 +21106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1054502747
 MonoBehaviour:
@@ -21545,8 +21545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 633, y: -114.94}
-  m_SizeDelta: {x: 159, y: 167.908}
+  m_AnchoredPosition: {x: -67.5, y: -193}
+  m_SizeDelta: {x: 135, y: 95.485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067945413
 MonoBehaviour:
@@ -27435,10 +27435,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Bienvenue dans The Walking Undead !\nVous \xEAtes le dernier survivant
     de l'apocalypse zombie, et il faut vous fondre parmi les zombies pour trouver
-    le materiel n\xE9cessaire \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nCherchez
-    les quatres objets demand\xE9s en faisant attention \xE0 ne pas vous encombrer
-    des autres, et \xE9vitez de courir ou de trop approcher les zombies pour ne pas
-    vous faire d\xE9masqu\xE9..\n\n-Appuyez sur espace pour continuer-"
+    les 4 objets n\xE9cessaire \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nEvitez
+    de courir ou de trop approcher les zombies pour ne pas vous faire d\xE9masquer..
+    Rester pendant 5 secondes dans les salles saintes vous permettera de vous faire
+    oublier des zombies qui vous ont remarqu\xE9s.\n\n-Appuyez sur espace pour continuer-"
 --- !u!222 &1223966067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28274,7 +28274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 4
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1302981143
 BoxCollider2D:
@@ -28701,7 +28701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1329790276
 BoxCollider2D:
@@ -30825,7 +30825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 3
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1413760301
 MonoBehaviour:
@@ -83512,7 +83512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1529489465
 MonoBehaviour:
@@ -83712,7 +83712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1558853034
 GameObject:
@@ -83761,7 +83761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 8
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1558853037
 BoxCollider2D:
@@ -91202,7 +91202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 5
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1630811674
 GameObject:
@@ -94890,7 +94890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 4
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1868755589
 MonoBehaviour:
@@ -96157,7 +96157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 2
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1888463305
 GameObject:
@@ -96942,7 +96942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberEnemy: 8
-  Hardeur: 0
+  Difficulty: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1935455048
 MonoBehaviour:
@@ -98090,8 +98090,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.99997, y: -120.969986}
-  m_SizeDelta: {x: 159.571, y: 155.848}
+  m_AnchoredPosition: {x: -470.73, y: -102}
+  m_SizeDelta: {x: 140.541, y: 120.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040873508
 MonoBehaviour:
