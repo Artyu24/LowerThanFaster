@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &8748063
 MonoBehaviour:
@@ -2395,8 +2395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &154288543
 GameObject:
@@ -5343,8 +5343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 3
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &297614918
 MonoBehaviour:
@@ -5962,8 +5962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 15
-  difficulty: 0
+  numberEnemy: 9
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &328486183
 BoxCollider2D:
@@ -7119,8 +7119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 5
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &409590650
 GameObject:
@@ -15757,8 +15757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &718221439
 MonoBehaviour:
@@ -17082,8 +17082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 6
-  difficulty: 0
+  numberEnemy: 3
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &812932272
 BoxCollider2D:
@@ -19897,9 +19897,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 945264680}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 945264681}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20591,8 +20591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 5
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1030380537
 GameObject:
@@ -21105,8 +21105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 8
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1054502747
 MonoBehaviour:
@@ -28273,8 +28273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 8
-  difficulty: 0
+  numberEnemy: 4
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1302981143
 BoxCollider2D:
@@ -28700,8 +28700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 8
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1329790276
 BoxCollider2D:
@@ -30824,8 +30824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 5
-  difficulty: 0
+  numberEnemy: 3
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1413760301
 MonoBehaviour:
@@ -83511,8 +83511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 3
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1529489465
 MonoBehaviour:
@@ -83711,8 +83711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1558853034
 GameObject:
@@ -83760,8 +83760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 15
-  difficulty: 0
+  numberEnemy: 8
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!61 &1558853037
 BoxCollider2D:
@@ -91201,8 +91201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 10
-  difficulty: 0
+  numberEnemy: 5
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1630811674
 GameObject:
@@ -94889,8 +94889,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 8
-  difficulty: 0
+  numberEnemy: 4
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1868755589
 MonoBehaviour:
@@ -96156,8 +96156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 5
-  difficulty: 0
+  numberEnemy: 2
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!1 &1888463305
 GameObject:
@@ -96941,8 +96941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a6f70b43c7a145832201c32283c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberEnemy: 15
-  difficulty: 0
+  numberEnemy: 8
+  Hardeur: 0
   enemy: {fileID: 3551254750902553997, guid: b58d6c417035d8f43a159808496f3d5e, type: 3}
 --- !u!114 &1935455048
 MonoBehaviour:
