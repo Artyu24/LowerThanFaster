@@ -11,6 +11,9 @@ TagManager:
   - MusicItem
   - MapItem
   - VICTORY
+  - Healthbar
+  - RangeZombie
+  - AttaqueZombie
   layers:
   - Default
   - TransparentFX
