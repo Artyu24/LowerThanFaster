@@ -38,7 +38,7 @@ public class VieDuJoueur : MonoBehaviour
         IEnumerator Immunité()
     {
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         Physics2D.IgnoreLayerCollision(gameObject.layer, 6, false);
         immunité = false;
     }
