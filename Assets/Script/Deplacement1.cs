@@ -10,33 +10,38 @@ public class Deplacement1 : MonoBehaviour
     public float VitesseBase;
     public float VitesseSprint;
     public bool sprint=false;
+    public Animator animator;
 
-    
+
 
     // Update is called once per frame
     public void FixedUpdate()
-      {
-            //code pour le sprint
-            if (Input.GetKey(KeyCode.LeftControl))
-            {
-                speed = VitesseSprint;
-                sprint = true;
-            }
-            else
-            {
-                speed = VitesseBase;
-                sprint = false;
-            }
+    {
+        //code pour le sprint
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            speed = VitesseSprint;
+            sprint = true;
+            animator.SetFloat("Sprint", 1f);
 
-            //code pour le deplacement
-            float horizontalInput = Input.GetAxisRaw("Horizontal") * speed * Time.fixedDeltaTime;
-            Vector3 targetVelocity = new Vector2(horizontalInput, rb.velocity.y);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        }
+        else
+        {
+            speed = VitesseBase;
+            sprint = false;
+            animator.SetFloat("Sprint", 0f);
+        }
 
-            float verticalInput = Input.GetAxisRaw("Vertical") * speed * Time.fixedDeltaTime;
-            Vector3 targetVelocity2 = new Vector2(rb.velocity.x, verticalInput);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity2, ref velocity, .05f);
 
+        //code pour le deplacement
+        float horizontalInput = Input.GetAxisRaw("Horizontal") * speed * Time.fixedDeltaTime;
+        Vector3 targetVelocity = new Vector2(horizontalInput, rb.velocity.y);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+
+        float verticalInput = Input.GetAxisRaw("Vertical") * speed * Time.fixedDeltaTime;
+        Vector3 targetVelocity2 = new Vector2(rb.velocity.x, verticalInput);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity2, ref velocity, .05f);
+        animator.SetFloat("Speed", (Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)));
 
         //orientation du personnage
         if (horizontalInput < 0)
