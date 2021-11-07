@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5097453172983781063}
   - component: {fileID: -8907039720104834671}
   - component: {fileID: 1361327668492823663}
+  - component: {fileID: -6862568687986353392}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Zombie
@@ -139,6 +140,21 @@ MonoBehaviour:
   rbEnemy: {fileID: -8907039720104834671}
   detectionZombies: {fileID: 2823852742150322429}
   zombies: {fileID: 3551254750902553997}
+--- !u!111 &-6862568687986353392
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551254750902553997}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4338068488291878470
 GameObject:
   m_ObjectHideFlags: 0
