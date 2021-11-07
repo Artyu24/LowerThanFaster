@@ -49,10 +49,7 @@ public class SolSafe : MonoBehaviour
     }
     IEnumerator ActivationZoneSafe()
     {
-        while (isInRange)
-        {
             yield return new WaitForSeconds(5);
             GentilsZombies();
-        }
     }
 }

@@ -18,7 +18,6 @@ public class LightOn : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponent<Light2D>().enabled = true;
-            GetComponent<BoxCollider2D>().enabled = false;
             gameObject.SetActive(true);
         }
     }
