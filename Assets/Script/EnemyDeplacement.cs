@@ -8,6 +8,7 @@ public class EnemyDeplacement : MonoBehaviour
     public float moveSpeedEnemy;
     public Rigidbody2D rbEnemy;
     public DetectionZombies detectionZombies;
+    public DetectionZombies detectionZombies2;
     private GameObject player;
     public GameObject zombies;
 
@@ -24,7 +25,7 @@ public class EnemyDeplacement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (detectionZombies.detected)
+        if ((detectionZombies.detected)||(detectionZombies2.detected))
         {
             //Détermine la direction dans laquelle les zombies se dirigent lorsqu'ils ont détecté le joueur
             bool test1 = player.GetComponent<Transform>().position.x > zombies.GetComponent<Transform>().position.x;

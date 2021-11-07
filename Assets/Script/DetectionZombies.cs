@@ -18,24 +18,40 @@ public class DetectionZombies : MonoBehaviour
 
     private void Update()
     {
-        
-        //Change la portée de détection des zombies si le joueur court ou non
-        if (player.GetComponent<Deplacement1>().sprint)
+
+        if (gameObject.tag == "RangeZombie")
         {
-            Range.GetComponent<CircleCollider2D>().radius = rangeMax;
-        }
-        else
-        {
-            Range.GetComponent<CircleCollider2D>().radius = rangeMin;
+            //Change la portée de détection des zombies si le joueur court ou non
+            if ((player.GetComponent<Deplacement1>().sprint))
+            {
+                Range.GetComponent<CircleCollider2D>().radius = rangeMax;
+            }
+            else
+            {
+                Range.GetComponent<CircleCollider2D>().radius = rangeMin;
+            }
         }
     }
     //Vérifie si le joueur est a portée
     //Cela permettra de savoir si les zombies se baladent aléatoirement ou non
     private void OnTriggerEnter2D(Collider2D collision_in)
     {
-        if (collision_in.CompareTag("Player"))
+        
+
+
+
+        if ((collision_in.CompareTag("Player")) && (player.GetComponent<Deplacement1>().sprint) && ((gameObject.tag == "RangeZombie")))
         {//Penser à rajouter un système permettant de vérifier qu'il n'y a pas d'obstacle entre les zombies et le joueur
-            detected = true; 
+            detected = true;
+            Debug.Log("Zone circle");
         }
+
+        if ((collision_in.CompareTag("Player")) && (gameObject.tag == "AttaqueZombie"))
+        {
+            Debug.Log("Zone hitbox");
+            detected = true;
+        }
+
+        
     }
 }
