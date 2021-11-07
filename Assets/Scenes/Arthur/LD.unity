@@ -6834,6 +6834,8 @@ RectTransform:
   - {fileID: 2142154974}
   - {fileID: 1986344070}
   - {fileID: 1952229502}
+  - {fileID: 1067945412}
+  - {fileID: 2040873507}
   m_Father: {fileID: 962551330}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20869,7 +20871,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6db80ac45f464f045845ea48d0816232, type: 3}
-    m_FontSize: 105
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -20882,7 +20884,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Utilisez les fl\xE8ches directionnelles pour vous diriger et ctrl gauche
     pour courir. \nVous avez 3 minutes pour r\xE9unir tout les objets suivants :
-    \n\n\n\n-Appuyez sur espace pour commencer-"
+    \n\n\n\nLa mini map    v      et la baguette magique \npourrons \xE9galement
+    vous \xEAtre utile.. mais ne vous encombrez pas du reste!\n-Appuyez sur espace
+    pour commencer-"
 --- !u!222 &1046702918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21507,6 +21511,81 @@ Transform:
   m_Father: {fileID: 1985728913}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1067945411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067945412}
+  - component: {fileID: 1067945414}
+  - component: {fileID: 1067945413}
+  m_Layer: 5
+  m_Name: BaguetteMagique
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1067945412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067945411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 389744738}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 633, y: -114.94}
+  m_SizeDelta: {x: 159, y: 167.908}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1067945413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067945411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c66629df5b6254a4e8dc8c1b69369863, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1067945414
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067945411}
+  m_CullTransparentMesh: 1
 --- !u!1 &1069159812
 GameObject:
   m_ObjectHideFlags: 0
@@ -27354,11 +27433,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bienvenue dans [nom du jeu] !\nVous \xEAtes le dernier survivant de l'apocalypse
-    zombie, et il faut vous fondre parmi les zombies pour trouver le materiel n\xE9cessaire
-    \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nCherchez les quatres objets demand\xE9s
-    en faisant attention \xE0 ne pas vous encombrer des autres, et \xE9vitez de courir
-    pour ne pas vous faire d\xE9masqu\xE9..\n\n-Appuyez sur espace-"
+  m_Text: "Bienvenue dans The Walking Undead !\nVous \xEAtes le dernier survivant
+    de l'apocalypse zombie, et il faut vous fondre parmi les zombies pour trouver
+    le materiel n\xE9cessaire \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nCherchez
+    les quatres objets demand\xE9s en faisant attention \xE0 ne pas vous encombrer
+    des autres, et \xE9vitez de courir ou de trop approcher les zombies pour ne pas
+    vous faire d\xE9masqu\xE9..\n\n-Appuyez sur espace pour continuer-"
 --- !u!222 &1223966067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -83547,7 +83627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468, y: -68}
+  m_AnchoredPosition: {x: -441, y: 131.99998}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1545200655
@@ -97015,8 +97095,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 458, y: -68}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 436, y: 132.00002}
+  m_SizeDelta: {x: 189.028, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1971360791
 GameObject:
@@ -97384,7 +97464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 158, y: -68}
+  m_AnchoredPosition: {x: 155, y: 132}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1986344071
@@ -97976,6 +98056,81 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.876399, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &2040873506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040873507}
+  - component: {fileID: 2040873509}
+  - component: {fileID: 2040873508}
+  m_Layer: 5
+  m_Name: MiniMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2040873507
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040873506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 389744738}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -440.99997, y: -120.969986}
+  m_SizeDelta: {x: 159.571, y: 155.848}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2040873508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040873506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 34102981c7e63b646b05313914b723a6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2040873509
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040873506}
+  m_CullTransparentMesh: 1
 --- !u!1 &2049941307
 GameObject:
   m_ObjectHideFlags: 0
@@ -116426,7 +116581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -68}
+  m_AnchoredPosition: {x: -142, y: 132}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2142154975
@@ -116516,8 +116671,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7530425393894121783}
   speed: 200
-  VitesseBase: 150
-  VitesseSprint: 300
+  VitesseBase: 100
+  VitesseSprint: 250
   sprint: 0
 --- !u!61 &7530425393894121776
 BoxCollider2D:
