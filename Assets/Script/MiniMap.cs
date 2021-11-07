@@ -48,7 +48,10 @@ public class MiniMap : MonoBehaviour
             zombie.GetComponent<EnemyDeplacement>().enabled = canActivate;
             foreach (Transform child in zombie.transform)
             {
-                child.GetComponent<DégatsZombies>().enabled = canActivate;
+                if (child.gameObject.tag == "AttaqueZombie")
+                {
+                    child.GetComponent<DégatsZombies>().enabled = canActivate;
+                }
                 child.GetComponent<DetectionZombies>().enabled = canActivate;
             }
         }
