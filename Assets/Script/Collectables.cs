@@ -33,7 +33,7 @@ public class Collectables : MonoBehaviour
                 }
 
             }
-            if (isInList == false)
+            if ((isInList == false)&&(objet.tag!="MusicItem")&&(objet.tag!="MapItem"))
             {
                 Collider2D[] lightningEnemy = Physics2D.OverlapCircleAll(gameObject.transform.position, radiusWrongItem);
                 foreach (Collider2D enemy in lightningEnemy)
