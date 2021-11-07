@@ -4114,7 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13777141, g: 0.509434, b: 0.1992274, a: 1}
+  m_Color: {r: 0.59607846, g: 0.10980392, b: 0.10980392, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4156,8 +4156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8555908, y: 0.8165283}
-  m_SizeDelta: {x: -19.7186, y: -21.7205}
+  m_AnchoredPosition: {x: 0.000061035156, y: -0.000061035156}
+  m_SizeDelta: {x: -0.00012207, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &243010853
 GameObject:
@@ -6839,8 +6839,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.8555908, y: 0.8166504}
-  m_SizeDelta: {x: -19.719, y: -21.72}
+  m_AnchoredPosition: {x: 0.000061035156, y: 1.1929932}
+  m_SizeDelta: {x: 0, y: 2.386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389744739
 MonoBehaviour:
@@ -6855,7 +6855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13777141, g: 0.509434, b: 0.1992274, a: 1}
+  m_Color: {r: 0.5943396, g: 0.108775325, b: 0.108775325, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27318,8 +27318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.0355835, y: -4.0526123}
-  m_SizeDelta: {x: -6.0715, y: -8.1054}
+  m_AnchoredPosition: {x: 3, y: -49}
+  m_SizeDelta: {x: -30.743, y: -0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223966066
 MonoBehaviour:
@@ -27354,7 +27354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bienvenue dans [nom du jeu] !\nVous \xEAtre le dernier survivant de l'apocalypse
+  m_Text: "Bienvenue dans [nom du jeu] !\nVous \xEAtes le dernier survivant de l'apocalypse
     zombie, et il faut vous fondre parmi les zombies pour trouver le materiel n\xE9cessaire
     \xE0 la cr\xE9ation d'un vaccin anti-zombie. \nCherchez les quatres objets demand\xE9s
     en faisant attention \xE0 ne pas vous encombrer des autres, et \xE9vitez de courir

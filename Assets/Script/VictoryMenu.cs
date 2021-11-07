@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class VictoryMenu : MonoBehaviour
 {
     public string levelToload;
+    public string levelToload2;
     public void Quit()
     {
         Application.Quit(); 
@@ -14,5 +15,9 @@ public class VictoryMenu : MonoBehaviour
     {
         SceneManager.LoadScene(levelToload);
         Time.timeScale = 1;
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene(levelToload2);
     }
 }
