@@ -834,7 +834,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330434014}
   - component: {fileID: 330434013}
-  - component: {fileID: 330434015}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -870,19 +869,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &330434015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330434012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b009e0841695b54c94c8408c39a2777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeMusic: 0
 --- !u!1 &332147573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,7 +3018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b009e0841695b54c94c8408c39a2777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeMusic: 1
+  volumeMusic: 0.5
 --- !u!4 &1121830582
 Transform:
   m_ObjectHideFlags: 0
@@ -4742,8 +4728,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1606854555}
   m_HandleRect: {fileID: 1692925692}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
